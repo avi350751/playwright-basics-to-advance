@@ -1,0 +1,17 @@
+// Launch Google and Validate
+
+const {test, expect} = require('@playwright/test')
+
+test('Verify Application title', async function({page}){
+
+    await page.goto("https://www.google.com")
+    const url = await page.url()
+    console.log("URL is: "+url)
+    expect(page).toHaveURL("https://www.google.com/")
+
+    const title = await page.title() 
+    console.log("Title is: "+title)
+    expect(page).toHaveTitle("Google")
+
+})
+

@@ -18,3 +18,16 @@ test('My third test', async function({page}){
     expect('Avi').toContain('Avi')
     expect(true).toBeTruthy()
 })
+
+test('My fourth test', async function({page}){
+
+    console.log("My 4th test")
+    expect('avi').toContain('avi')
+    expect(false).toBeFalsy()
+})
+
+test('My fifth test', async function({page}){
+
+    console.log("My 5th test")
+    expect("Ravi Varma".includes("Ravi")).toBeTruthy()
+})
