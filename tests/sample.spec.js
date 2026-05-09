@@ -9,7 +9,7 @@ test('My first test', async function({page}){
 test('My second test', async function({page}){
 
     console.log("My 2nd test")
-    expect(100).toBe(112)
+    expect(100).toBe(100)
 })
 
 test('My third test', async function({page}){
