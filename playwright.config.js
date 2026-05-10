@@ -18,14 +18,20 @@ export default defineConfig({
   use: {
     
     trace: 'on-first-retry',
-    //viewport: { width: 1920, height: 1080 },
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] }
+      use: { ...devices['Desktop Chrome'],
+      viewport: { width: 1536, height: 960 },
+      screenshot: 'only-on-failure',
+      video: 'retain-on-failure',
+      locale: 'en-US',
+      timezoneId: 'America/Chicago',
+      trace: 'on'
+       }
     },
   ],
 });
